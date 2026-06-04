@@ -1,0 +1,999 @@
+/* ==========================================================================
+   RESET Y VARIABLES INSPIRADAS EN LA TRICOLOR
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --rojo: #dc2626;
+    /* Rojo vibrante premium */
+    --amarillo: #f59e0b;
+    /* Amarillo/Oro andino */
+    --verde: #10b981;
+    /* Verde Amazonía/Altiplano */
+    --oscuro-puro: #090d16;
+    --oscuro-card: #1e293b;
+    --gris-claro: #f1f5f9;
+    --texto-dark: #0f172a;
+    --texto-light: #64748b;
+    --radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    color: var(--texto-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* utilitarios de color */
+.rojo {
+    color: var(--rojo);
+}
+
+.amarillo {
+    color: var(--amarillo);
+}
+
+.verde {
+    color: var(--verde);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-light {
+    background-color: var(--gris-claro);
+}
+
+.bg-dark {
+    background-color: var(--oscuro-puro);
+    color: white;
+}
+
+/* ==========================================================================
+   NAVBAR MODERNA Y FLOTANTE
+   ========================================================================== */
+.navbar {
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   HERO SECCIÓN CON IMAGEN DE CRISIS REALISTA (Huelgas/Caminos)
+   ========================================================================== */
+.hero {
+    position: relative;
+    /* Imagen impactante de Unsplash que simula carreteras trancadas/crisis de transporte en Sudamérica */
+    background: url('https://images.unsplash.com/photo-1547483238-2cbf88bf2443?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Sombreado de fondo cinemático e inteligente */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(9, 13, 22, 0.95) 40%, rgba(22, 28, 45, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.badge-bolivia {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.badge-bolivia span[class^="b-"] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.b-rojo {
+    background: var(--rojo);
+}
+
+.b-amarillo {
+    background: var(--amarillo);
+}
+
+.b-verde {
+    background: var(--verde);
+}
+
+.hero-content h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.block-text {
+    display: inline-block;
+    margin-right: 15px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-main {
+    background: var(--rojo);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(220, 38, 38, 0.5);
+    background: #b91c1c;
+}
+
+.btn-sub {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+}
+
+.btn-sub:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   SECCIONES Y TITULOS
+   ========================================================================== */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 5px;
+    background: var(--amarillo);
+    margin: 0 auto 3rem auto;
+    border-radius: 10px;
+}
+
+.lead {
+    font-size: 1.3rem;
+    color: var(--texto-light);
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   TARJETAS INTEGRANDO COLORES ESPECÍFICOS (Sección ¿En qué ayuda?)
+   ========================================================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-top: 5px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.border-rojo {
+    border-top-color: var(--rojo);
+}
+
+.border-amarillo {
+    border-top-color: var(--amarillo);
+}
+
+.border-verde {
+    border-top-color: var(--verde);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--texto-light);
+}
+
+/* ==========================================================================
+   DATOS EN TIEMPO REAL (Oscuro elegante)
+   ========================================================================== */
+/* ==========================================================================
+   DISEÑO PREMIUM: MONITORES EN TIEMPO REAL (SOLO ESTILOS)
+   ========================================================================== */
+
+/* Contenedor principal en cuadrícula interactiva */
+.realtime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 20px 0;
+}
+
+/* Tarjeta individual con efecto de cristal oscuro (Glassmorphism) */
+.realtime-card {
+    background: #111827;
+    /* Gris oscuro profundo para hacer resaltar los colores */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.2rem 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    /* Alineación limpia a la izquierda */
+}
+
+/* Animación de elevación e iluminación al pasar el cursor */
+.realtime-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos internos de los indicadores (Gasolina, Inflación, etc.) */
+.realtime-card h3,
+.realtime-card span {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espacio perfecto si hereda iconos de FontAwesome */
+}
+
+/* Números y porcentajes principales en grande */
+.realtime-card .card-value,
+.realtime-card h2,
+.realtime-card [class*="value"] {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    /* Fuerza el color blanco puro para el dato numérico */
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+}
+
+/* Texto descriptivo inferior de la tarjeta */
+.realtime-card p,
+.realtime-card .card-desc {
+    color: #94a3b8 !important;
+    /* Gris suave para que sea legible pero no opaque al número */
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   INYECCIÓN DE LA TRICOLOR MEDIANTE DETALLES DE LUZ (Bordes superiores)
+   ========================================================================== */
+
+/* Si tu JS hereda o añade clases por colores, estos estilos se activarán solos: */
+.realtime-card.rojo,
+.realtime-card:nth-child(1) {
+    border-top: 4px solid var(--rojo, #dc2626);
+}
+
+.realtime-card.amarillo,
+.realtime-card:nth-child(2),
+.realtime-card:nth-child(3) {
+    border-top: 4px solid var(--amarillo, #f59e0b);
+}
+
+.realtime-card.verde,
+.realtime-card:nth-child(4) {
+    border-top: 4px solid var(--verde, #10b981);
+}
+
+/* Iluminación sutil de fondo para las esquinas de las tarjetas */
+.realtime-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   SIMULADORES INTERACTIVOS Y CONTENEDORES
+   ========================================================================== */
+/* IMPORTACIÓN DE FUENTE SUTIL Y MODERNA */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   TABLERO DE SIMULACIÓN "IDENTIDAD BOLIVIANA" (TAMAÑO EQUILIBRADO)
+   ========================================================================== */
+
+/* Contenedor de pestañas: Estilo modular claro */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    padding: 8px;
+    background: #f8fafc;
+    border-radius: 14px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e2e8f0;
+}
+
+/* Botones de los simuladores */
+.tab-button {
+    padding: 10px 22px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #64748b;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+}
+
+/* Hover: Toque amarillo sutil */
+.tab-button:hover {
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.08);
+    border-color: #f59e0b;
+}
+
+/* Activo: Se viste con el Rojo patrio */
+.tab-button.active {
+    background: #c8102e;
+    /* Rojo institucional */
+    color: #ffffff;
+    border-color: #c8102e;
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.2);
+}
+
+/* ==========================================================================
+   EL PANEL CENTRAL DEL SIMULADOR (Tamaño Normal / Estándar)
+   ========================================================================== */
+.simulator-wrapper {
+    background: #ffffff;
+    padding: 3rem;
+    /* Tamaño intermedio ideal */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    max-width: 850px;
+    /* Ancho estándar, ni gigante ni pequeño */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* La escarapela / detalle tricolor en la esquina superior derecha */
+.simulator-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #006b3f 20%, #fbbf24 21%, #fbbf24 45%, #c8102e 46%, #c8102e 70%, transparent 71%);
+    opacity: 0.08;
+    /* Muy sutil para que decore el fondo artísticamente */
+    pointer-events: none;
+}
+
+/* Línea de cabecera tricolor continuo */
+.simulator-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #c8102e 33.3%, #fbbf24 33.3%, #fbbf24 66.6%, #006b3f 66.6%);
+}
+
+/* Título interno elegante */
+.simulator-wrapper h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    border-left: 5px solid #006b3f;
+    /* Detalle Verde */
+    padding-left: 12px;
+}
+
+/* ==========================================================================
+   DISEÑO DE LOS CAMPOS (FORMULARIO BONITO)
+   ========================================================================== */
+
+.simulator-wrapper label {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 1.5rem;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs de números y menús desplegables */
+.simulator-wrapper input[type="number"],
+.simulator-wrapper select {
+    width: 100%;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* Foco interactivo con el Amarillo Oro */
+.simulator-wrapper input[type="number"]:focus,
+.simulator-wrapper select:focus {
+    border-color: #fbbf24;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.15);
+}
+
+/* Deslizadores de rango (Sliders) */
+.simulator-wrapper input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin: 1.2rem 0;
+    outline: none;
+}
+
+/* Botón del deslizador en color Verde Sólido */
+.simulator-wrapper input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #006b3f;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 107, 63, 0.2);
+}
+
+/* ==========================================================================
+   GRÁFICOS SIMULADOS EN CSS (EL DETALLE "GUAO" DIDÁCTICO)
+   ========================================================================== */
+/* Pequeña barra indicadora decorativa que simula un gráfico estadístico */
+.simulator-graphic-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.simulator-graphic-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 65%;
+    /* Simula un porcentaje de carga */
+    background: linear-gradient(to right, #006b3f, #fbbf24, #c8102e);
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   BOTONES DE ACCIÓN EQUILIBRADOS
+   ========================================================================== */
+.simulator-wrapper button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Calcular: Verde Palmera */
+.simulator-wrapper button:first-of-type,
+.btn-calculate {
+    background: #006b3f;
+    color: #ffffff;
+}
+
+.simulator-wrapper button:first-of-type:hover,
+.btn-calculate:hover {
+    background: #004d2e;
+    transform: translateY(-1px);
+}
+
+/* Limpiar: Blanco/Gris Claro */
+.simulator-wrapper button:nth-of-type(2),
+.btn-clear {
+    background: #ffffff;
+    color: #64748b;
+    border: 2px solid #e2e8f0;
+}
+
+.simulator-wrapper button:nth-of-type(2):hover,
+.btn-clear:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+
+/* ==========================================================================
+   PANEL DE RESPUESTAS (LIMPIO, CLARO Y ANALÍTICO)
+   ========================================================================== */
+.simulator-result,
+#simulator-content div[id*="resultado"],
+.simulator-response-pane {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 14px;
+    border-top: 4px solid #fbbf24;
+    /* Separador Amarillo */
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
+}
+
+/* Título de la respuesta */
+.simulator-result h4,
+.simulator-response-pane h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
+/* El número final: Grande y Claro en Rojo Carmín */
+.simulator-result span,
+.simulator-result strong,
+.amount {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #c8102e;
+    display: block;
+    margin: 0.5rem 0 1rem 0;
+    letter-spacing: -1px;
+}
+
+/* Bloque didáctico explicativo */
+.simulator-result p,
+.result-analysis {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.6;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border-left: 4px solid #006b3f;
+    /* Línea Verde que guía al usuario */
+}
+
+/* ==========================================================================
+   CASOS DE ESTUDIO
+   ========================================================================== */
+
+/* 1. Contenedor principal que ordena las tablas de 3 en 3 */
+.cases-static-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas en computadora */
+    gap: 2rem;                             /* Espacio de separación entre las tablas */
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;              /* Centra la cuadrícula en la pantalla */
+    width: 100%;
+}
+
+/* 2. Tarjeta blanca contenedora para cada caso de estudio */
+.static-case-card {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    border-bottom: 4px solid var(--amarillo) !important; /* Detalle de color en la base */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+}
+
+/* 3. Título azul del caso (Estilo ejecutivo idéntico a tu ejemplo) */
+.static-case-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #1e3a8a !important; /* Color azul de tu imagen */
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.2rem !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+}
+
+/* 4. Estructura de la Tabla Fija */
+.static-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 1.2rem !important;
+    font-size: 0.95rem !important;
+}
+
+/* Encabezados (Dato / Valor) */
+.static-table th {
+    text-align: left !important;
+    padding: 6px 0 !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+}
+
+/* Alinea los valores numéricos a la derecha como en tu imagen */
+.static-table th:last-child, 
+.static-table td:last-child {
+    text-align: right !important;
+}
+
+/* Filas de la tabla */
+.static-table td {
+    padding: 8px 0 !important;
+    color: #0f172a !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+/* Primera columna en negrita suave */
+.static-table td:first-child {
+    font-weight: 500 !important;
+}
+
+/* 5. Cuadro inferior de "Resultado esperado" */
+.expected-result-box {
+    margin-top: auto !important; /* Fuerza a que todas las cajas terminen alineadas abajo */
+    padding-top: 1rem !important;
+    border-top: 1px dashed #cbd5e1 !important; /* Línea segmentada elegante */
+    text-align: left !important;
+}
+
+/* Título de resultado esperado */
+.expected-result-box h4 {
+    margin: 0 0 0.4rem 0 !important;
+    color: #1e3a8a !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Texto descriptivo */
+.expected-result-box p {
+    margin: 0 !important;
+    color: #334155 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Ajuste automático para celulares y tablets)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .cases-static-grid {
+        grid-template-columns: repeat(2, 1fr); /* Se acomodan de 2 en 2 en pantallas medianas */
+    }
+}
+
+@media (max-width: 680px) {
+    .cases-static-grid {
+        grid-template-columns: 1fr; /* Se acomodan de 1 en 1 (vertical) en celulares */
+        gap: 1.5rem;
+    }
+}
+/* ==========================================================================
+   RESPONSIVE PARA DISPOSITIVOS MÓVILES
+   ========================================================================== */
+@media (max-width: 992px) {
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .cases-grid {
+        grid-template-columns: 1fr;
+        /* 1 columna en celulares */
+    }
+
+    .case-image-wrapper {
+        height: 160px;
+    }
+}
+
+/* ==========================================================================
+   CONCLUSIONES Y CIERRE ELEGANTE
+   ========================================================================== */
+.card-conclusiones {
+    background: linear-gradient(135deg, white, var(--gris-claro));
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-conclusiones h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-conclusiones blockquote {
+    border-left: 4px solid var(--rojo);
+    padding-left: 20px;
+    font-style: italic;
+    margin: 2rem 0;
+    color: #475569;
+    font-size: 1.15rem;
+}
+
+.final-tag {
+    font-weight: 700;
+    color: var(--verde);
+}
+
+/* ==========================================================================
+   FOOTER PREMIUM
+   ========================================================================== */
+footer {
+    background: var(--oscuro-puro);
+    color: #94a3b8;
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-credits {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer-meta {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.footer-flag {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+.footer-flag span {
+    flex: 1;
+}
+
+.footer-flag .f-rojo {
+    background: var(--rojo);
+}
+
+.footer-flag .f-amarillo {
+    background: var(--amarillo);
+}
+
+.footer-flag .f-verde {
+    background: var(--verde);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .simulator-wrapper {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
