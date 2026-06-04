@@ -1,5 +1,3 @@
-# 📊 Simulador de Impacto Económico y Casos de Estudio Críticos
-
 ## **RESILIENCIA ANDINA**
 Este proyecto es una plataforma web interactiva y responsiva diseñada para simular y analizar los efectos de la crisis económica actual en diferentes sectores estratégicos de Bolivia. A través de **6 simuladores matemáticos independientes**, el sistema permite proyectar variables críticas como el desabastecimiento de carburantes, la inflación en la canasta básica, la brecha cambiaria en las importaciones y la sostenibilidad del presupuesto familiar alteño y paceño.
 
