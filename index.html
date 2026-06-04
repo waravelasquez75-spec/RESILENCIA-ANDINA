@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESILIENCIA ANDINA | La Paz, Bolivia</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- FontAwesome para iconos geniales -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR MEJORADA -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line-up tri-rojo"></i>
+                <span class="rojo">RESILIENCIA</span><span class="amarillo">ANDINA</span>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#contexto"><i class="fa-solid fa-circle-info"></i> Contexto</a>
+                <a href="#ayuda"><i class="fa-solid fa-hands-holding-child"></i> ¿En qué ayuda?</a>
+                <a href="#datos-reales"><i class="fa-solid fa-bolt"></i> Datos Reales</a>
+                <a href="#simuladores"><i class="fa-solid fa-sliders"></i> Simuladores</a>
+                <a href="#casos"><i class="fa-solid fa-briefcase"></i> Casos</a>
+                <a href="#conclusiones"><i class="fa-solid fa-flag"></i> Fin</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION CON TRICOLOR Y FONDO IMPACTANTE -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="badge-bolivia">
+                <span class="b-rojo"></span><span class="b-amarillo"></span><span class="b-verde"></span>
+                <span>PROYECTO WEB I • LA PAZ - WARA VELASQUEZ</span>
+            </div>
+            <h1>
+                <span class="rojo block-text">RESILIENCIA</span>
+                <span class="amarillo block-text">ANDINA</span>
+            </h1>
+            <p class="subtitle">Simulador Interactivo de la Crisis Económica y Toma de Decisiones Financieras</p>
+            <div class="hero-actions">
+                <a href="#simuladores" class="btn-main"><i class="fa-solid fa-play"></i> Iniciar Simuladores</a>
+                <a href="#contexto" class="btn-sub">Ver Contexto Actual</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXTO ACTUAL -->
+    <section id="contexto" class="section">
+        <div class="container text-center">
+            <h2 class="section-title"><span class="rojo">Contexto</span> <span class="amarillo">Actual</span></h2>
+            <div class="title-underline"></div>
+            <p class="lead">Nuestro país enfrenta escasez de carburantes, incremento de precios de la canasta básica,
+                bloqueos de rutas, especulación y pérdida del poder adquisitivo. Esta herramienta educativa te ayuda a
+                modelar estos impactos y prepararte ante la adversidad.</p>
+        </div>
+    </section>
+
+    <!-- ¿EN QUÉ AYUDA? -->
+    <section id="ayuda" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center"><span class="verde">¿En qué ayuda</span> esta página?</h2>
+            <div class="title-underline"></div>
+            <div class="features-grid">
+                <div class="feature-card border-rojo">
+                    <i class="fa-solid fa-calculator card-icon rojo"></i>
+                    <h3>Modelos Matemáticos</h3>
+                    <p>Simula el impacto porcentual de la inflación real en la canasta familiar paceña.</p>
+                </div>
+                <div class="feature-card border-amarillo">
+                    <i class="fa-solid fa-gas-pump card-icon amarillo"></i>
+                    <h3>Crisis de Carburantes</h3>
+                    <p>Calcula las horas perdidas en filas de diésel/gasolina y su impacto económico laboral.</p>
+                </div>
+                <div class="feature-card border-verde">
+                    <i class="fa-solid fa-shield-halved card-icon verde"></i>
+                    <h3>Estrategias de Mitigación</h3>
+                    <p>Recibe recomendaciones de ahorro basadas en los resultados de tus simulaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATOS EN TIEMPO REAL -->
+    <section id="datos-reales" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-center text-white">Monitoreo <span class="amarillo">en Tiempo Real</span></h2>
+            <p class="section-subtitle text-center">Indicadores clave simulados para el departamento de La Paz</p>
+            <div class="realtime-grid" id="realtime-grid">
+                <!-- Los scripts de JS inyectarán aquí las tarjetas -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADORES -->
+    <section id="simuladores" class="section">
+        <div class="container">
+            <h2 class="section-title text-center"><span class="rojo">Simuladores</span> <span
+                    class="verde">Interactivos</span></h2>
+            <div class="tabs" id="tabs">
+                <!-- Botones de la A a la F inyectados por JS -->
+            </div>
+            <div id="simulator-content" class="simulator-wrapper">
+                <!-- Contenido dinámico del simulador -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ESTUDIO -->
+    <section id="casos" class="section bg-light">
+        <div class="container">
+           <h2 class="section-title text-center"><span class="rojo">Casos de</span> <span class="amarillo">Estudio</span> <span class="verde">para Probar</span></h2>
+            <div class="title-underline"></div>
+            
+            <p class="section-subtitle text-center">Estos son los datos de entrada con los que el usuario puede hacer la prueba el simulador</p>
+
+            <div class="cases-static-grid">
+                
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 1: Reserva de Carburante</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Reserva inicial</td><td>10000 litros</td></tr>
+                            <tr><td>Consumo diario</td><td>1200 litros</td></tr>
+                            <tr><td>Reabastecimiento diario</td><td>300 litros</td></tr>
+                            <tr><td>Nivel crítico</td><td>2000 litros</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe calcular aproximadamente en cuántos días la reserva llegará al nivel crítico.</p>
+                    </div>
+                </div>
+
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 2: Alimentos</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada </th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Precio anterior</td><td>8 Bs</td></tr>
+                            <tr><td>Precio Actual</td><td>11 Bs</td></tr>
+                            <tr><td>Cantidad Mensual</td><td>10 unidades</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe calcular el gasto anterior, el gasto actual y la diferencia.</p>
+                    </div>
+                </div>
+
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 3: Transporte</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Distancia Normal</td><td>10 km</td></tr>
+                            <tr><td>Distancia con Desvio</td><td>16 km</td></tr>
+                            <tr><td>Coto por km</td><td>2 Bs</td></tr>
+                            <tr><td>Viajes por Semana </td><td>5</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe calcular el gasto adicional semanal por el desvío.</p>
+                    </div>
+                </div>
+
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 4: Presupuesto</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Presupuesto Disponible</td><td>500 Bs</td></tr>
+                            <tr><td>Total de la Compra</td><td>580 Bs</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe mostrar que el presupuesto no alcanza y calcular cuánto falta.</p>
+                    </div>
+                </div>
+
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 5: Rumor de Escasez</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Demanda Normal</td><td>100 unidades</td></tr>
+                            <tr><td>Aumento por Rumor</td><td>40 %</td></tr>
+                            <tr><td>Stock Disponible</td><td>120 unidades</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe calcular la nueva demanda y mostrar si el stock alcanza o no.</p>
+                    </div>
+                </div>
+
+                <div class="static-case-card">
+                    <h3 class="static-case-title">Simulador 6: Poder Adquisitivo</h3>
+                    <table class="static-table">
+                        <thead>
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Valor Fijo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ingrese Mensual</td><td>2500 Bs</td></tr>
+                            <tr><td>Gasto Anterior</td><td>1800 Bs</td></tr>
+                            <tr><td>Gasto Actual</td><td>2300 Bs</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="expected-result-box">
+                        <h4>🎯 Resultado esperado:</h4>
+                        <p>La página debe mostrar el ingreso mensual que obtiene y como su gasto actual incremento a diferencia del anterior</p>
+                    </div>
+                </div>
+
+            </div> </div>
+    </section>
+    <!-- CONCLUSIONES -->
+    <section id="conclusiones" class="section pattern-bg">
+        <div class="container card-conclusiones">
+            <h2><i class="fa-solid fa-brain"></i> Reflexión Final y Resiliencia</h2>
+            <p><strong>RESILIENCIA ANDINA</strong> es un entorno analítico y educativo diseñado para el contexto paceño.
+                A través de la lógica matemática aplicada a la programación web, visualizamos el impacto real de los
+                bloqueos, desabastecimiento de dólares e inflación en los hogares.</p>
+            <blockquote>
+                "La crisis no se puede evitar individualmente, pero la organización, la información real y la
+                resiliencia digital nos permiten mitigar el golpe."
+            </blockquote>
+            <p class="final-tag">¡Cuidate e informate!</p>
+        </div>
+    </section>
+
+    <!-- FOOTER ULTRA PROFESIONAL -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="rojo">RESILIENCIA</span> <span class="amarillo">ANDINA</span>
+            </div>
+            <p class="footer-credits">Proyecto Final • <strong>Programación Web I</strong></p>
+            <p class="footer-meta">Ingeniería en Sistemas • Diseñadora Web • La Paz, Bolivia</p>
+            <div class="footer-flag">
+                <span class="f-rojo"></span><span class="f-amarillo"></span><span class="f-verde"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+
+</html>
